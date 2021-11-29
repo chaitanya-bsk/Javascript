@@ -1,0 +1,4 @@
+Microservice is independent feature which contains all code , which can run on its own (it has its own middleware(login), own DB , Router) - basically standalone
+All services cannot use single data base. even if it crashes all services will be affected.  So each service should have each database. Also scaling not possible.if one DB is present and wants to scale , it has to apply across all. but if we have separate DB we can scale independently based on requirement
+one microservice also cannot access another service database. if service A uses another DB B , if DB B crashes ,service A will crash along with service B also 1. schema or structure can change suddenly or service B maynot inform that change to service A. so service A will expect different schema and will crash (name can be changed to firstname) 2. some services run efficiently with sql/nosql
+
