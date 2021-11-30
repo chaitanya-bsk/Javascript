@@ -1,4 +1,13 @@
 Microservice is independent feature which contains all code , which can run on its own (it has its own middleware(login), own DB , Router) - basically standalone
-All services cannot use single data base. even if it crashes all services will be affected.  So each service should have each database. Also scaling not possible.if one DB is present and wants to scale , it has to apply across all. but if we have separate DB we can scale independently based on requirement
-one microservice also cannot access another service database. if service A uses another DB B , if DB B crashes ,service A will crash along with service B also 1. schema or structure can change suddenly or service B maynot inform that change to service A. so service A will expect different schema and will crash (name can be changed to firstname) 2. some services run efficiently with sql/nosql
 
+All services cannot use single data base. even if it crashes all services will be affected.  So each service should have each database. Also scaling not possible.if one DB is present and wants to scale , it has to apply across all. but if we have separate DB we can scale independently based on requirement
+
+one microservice also cannot access another service database. if service A uses another DB B , if DB B crashes ,service A will crash along with service B also 1. schema or structure can change suddenly or service B maynot inform that change to service A. so service A will expect different schema and will crash (name can be changed to firstname) 2. some services run efficiently with sql/nosql, so we cant keep one type of DB across all services. So one DB per one service
+
+so if we want to implement a new service (D) which needs information from other services (A,B,C) we need to have proper data management set up - 2 ways - Sync and Async
+Sync - new service D will call service A,B,C and they call their respective DBs to fetch data - 
+disadvantages - if one service fails entire thing fails (if FS,Pricing is down then SC is also down)
+it takes time , as all internal calls have to be made
+
+Async - 1. We can have event bus (rabbitmq), where all the required requests are sent and routing happens to the respective service and from there again it is sent back. Orders can be implemeted
+2. Have database with data columns which can be used by other services
