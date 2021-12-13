@@ -6,3 +6,55 @@ npm vs yarn -
 will npm installs dev dependencies
 
 
+
+Object Oriented Programming - 
+what are Objects - which have properties and attributes or actions or behaviours 
+
+4 Ways of creating objects - 
+1) Object literal 2) Object.Create() 3) Functions (Functions are objects in Javascript) 4) Using Classes 
+
+
+Class - 
+it is a blue print for creating objects - if you have blueprint (car), we can create multiple cars (Audi, BMW)
+Ways of creating classes - 
+
+1) Creating class - 
+what is constructor, what are methods (which performs actions inside classes) , what are getmethods and set methods (used to set data )
+class Mobile {
+constructor(name,color){
+this.name = name;
+this.color = color;
+}
+calling(){
+console.log ();
+}
+playing(){
+console.log ();
+}
+setName(newName){
+this.name = newName
+}
+}
+
+2) Creating / Instantiating ojects using class - 
+let redmi = new Mobile ("redmi note 7" , "black");
+let samsung = new Mobile ("galaxy s" , "blue");
+
+3) Getting/setting properties and actions with created oject -
+console.log(redmi.color);
+console.log(redmi.name);
+redmi.setName("redmi note 9");
+
+
+Encapsulation / Data Hiding - 
+-> Encapsulation is a functionality to hide the data in a single unit along with a
+functionality to protect information from outside
+-> Data of an object should not be directly exposed.
+-> Use var keyword to make data members private.
+-> Use setter methods to set the data and getter methods to get that data.
+
+
+
+Qsns - 
+giving parameters of class via constructor and function difference
+
