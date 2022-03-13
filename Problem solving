@@ -1,1 +1,30 @@
 
+// Finding Duplicates 
+// let arr = [1,2,5,5,2,1];
+
+// let duplicatecount={};
+
+// for ( i=0; i<arr.length; i++){
+//     console.log(duplicatecount[arr[i]]);
+//     if (!duplicatecount[arr[i]]){
+//         console.log(!duplicatecount[arr[i]]);
+//         duplicatecount[arr[i]] =1 ;
+//     }
+//     else{
+//         console.log(!duplicatecount[arr[i]]);
+//         duplicatecount[arr[i]] +=1 ;
+//     }
+// }
+// console.log(duplicatecount);
+
+
+let arr = [1,2,3,4];
+let duplicatecount= { '1': 5, '2': 6, '5': 8 };
+console.log(!duplicatecount[3]);
+
+//duplicatecount[2] -> it will search for key word (2) in the disctionary and it will return its value associated with it (6);
+//!duplicatecount[2] -> it will return "false" as the key value of 2 is exisiting  
+//!duplicatecount[3] -> it will return "true" as the key value doesnt exist
+
+
+
