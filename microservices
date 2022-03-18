@@ -11,3 +11,4 @@ it takes time , as all internal calls have to be made
 
 Async - 1. We can have event bus (rabbitmq), where all the required requests are sent and routing happens to the respective service and from there again it is sent back. Orders can be implemeted
 2. Have database with data columns which can be used by other services
+
