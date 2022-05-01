@@ -27,7 +27,30 @@ console.log(!duplicatecount[3]);
 //!duplicatecount[3] -> it will return "true" as the key value doesnt exist
 
 
+// Priniting Even Numbers -
+for (i=0;i<20;i++){
+    if (i%2==0){
+        console.log(i)
+    }
 
+};
 
+// Getting first set of array of value -
+var first =  (array, n) => {
+    if (array == null) 
+        return void 0;
+    if (n == null) 
+        return array[0];
+    if (n < 0)
+        return [];
+  return array.slice(0, n);
+};
 
+console.log(first([7, 9, 0, -2],31));
+console.log(first([],3));
 
+// Joining array - 
+myColor = ["Red", "Green", "White", "Black"];
+console.log(myColor.toString());
+console.log(myColor.join());
+console.log(myColor.join('+'));
