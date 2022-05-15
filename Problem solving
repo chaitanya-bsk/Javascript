@@ -1,21 +1,21 @@
 
 // Finding Duplicates 
-// let arr = [1,2,5,5,2,1];
 
-// let duplicatecount={};
+let arr = [1,2,5,5,2,1];
+ let duplicatecount={};
 
-// for ( i=0; i<arr.length; i++){
-//     console.log(duplicatecount[arr[i]]);
-//     if (!duplicatecount[arr[i]]){
-//         console.log(!duplicatecount[arr[i]]);
-//         duplicatecount[arr[i]] =1 ;
-//     }
-//     else{
-//         console.log(!duplicatecount[arr[i]]);
-//         duplicatecount[arr[i]] +=1 ;
-//     }
-// }
-// console.log(duplicatecount);
+ for ( i=0; i<arr.length; i++){
+     console.log(duplicatecount[arr[i]]);
+     if (!duplicatecount[arr[i]]){
+         console.log(!duplicatecount[arr[i]]);
+         duplicatecount[arr[i]] =1 ;
+     }
+     else{
+         console.log(!duplicatecount[arr[i]]);
+         duplicatecount[arr[i]] +=1 ;
+     }
+    }
+ console.log(duplicatecount);
 
 
 let arr = [1,2,3,4];
@@ -51,6 +51,57 @@ console.log(first([],3));
 
 // Joining array - 
 myColor = ["Red", "Green", "White", "Black"];
-console.log(myColor.toString());
-console.log(myColor.join());
-console.log(myColor.join('+'));
+console.log(myColor.toString()); - Red,Green,White,Black
+console.log(myColor.join()); Red,Green,White,Black
+console.log(myColor.join('+')); Red+Green+White+Black
+
+// JavaScript function to check whether an `input` is an array or not
+myColor = ["Red", "Green", "White", "Black"];
+var is_array = function(input){
+    if(toString.call(input)== "[object Array]")
+        return true;
+    return false;
+};
+console.log(is_array(myColor)); true
+console.log(toString.call(myColor)); - [object Array]
+console.log(Array.isArray(myColor)); - true
+
+/theory/ toString.call
+const arr = [1,2,3,4,5]
+Object.prototype.toString.call(arr) // returns "[object Array]"
+const str = 'test'
+str.toString() // returns 'test'
+Object.prototype.toString.call(str) // returns "[object String]"
+
+/ES6 - version /-
+var is_array = input => {
+  if (toString.call(input) === "[object Array]")
+    return true;
+  return false;   
+    };
+
+// clonearray
+
+var clonearray = function (input) {
+    return input.slice(0);
+};
+var clonearray = input => input.slice(0);
+let y = [...myColor];
+let y2 = Array.from(myColor);
+let y3 = myColor.slice();
+let y4 = myColor.map(i => i);
+let y5 = myColor.filter(() => true);
+
+//Insert dashes (-) between each two even digits 
+const num = 5447743;
+const number = num.toString();
+const result = [number[0]]; - if result is given as number[0], string , then push. will give push is not defined as it supports only arrays 
+console.log(typeof(result));
+
+for (let x=1;x<number.length; x++ ) {
+    if ((number[x-1]%2==0)&&(number[x]%2==0))
+        {result.push('-',number[x])}
+    else
+    {result.push(number[x]);}
+}
+console.log(result.join(''));
