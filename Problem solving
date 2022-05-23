@@ -105,3 +105,55 @@ for (let x=1;x<number.length; x++ ) {
     {result.push(number[x]);}
 }
 console.log(result.join(''));
+
+Sorting - 
+var arr=[-3,8,7,6,5,-4,3,2,1];
+var arr2=[];
+var min = arr[0];
+var temp;
+var max= arr[0];
+
+for (i=0;i<arr.length;i++){
+    if (max<arr[i]) max = arr[i];
+}
+
+for (var i=0; i<arr.length;i++){
+
+    for (var j=0; j<arr.length;j++){
+        if (arr[j]!="x")
+        {
+            if (min>arr[j])
+            {
+                min=arr[j];
+                temp=j;
+
+            }
+        }
+    }
+    arr2[i]=min;
+    arr[temp]="x";
+    min=max;
+}
+console.log(arr2);
+
+
+# counting maximum occurring
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
