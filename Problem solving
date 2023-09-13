@@ -296,3 +296,61 @@ function binarySearch(arr,target){
 console.log(binarySearch([1,4,6,7,89,92],92))
 console.log(binarySearch([1,4,6,7,89,92],6))
 
+// Check if it is a String - if (Object.prototype.toString.call(input)==='[object String]')
+//split string with space - return input.trim().split(" ")
+// slice with characters - return input.slice(3, length);
+
+// multiple names 
+var split_names = input.trim().split(" ") - this will give split 
+ if (split_names.length>1){
+    return split_names[0] + " " + split_names[1].charAt(0) + "."
+
+// convert to lower case and replace spaces with "-" -> return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-");
+// convert first letter to capital - str1.charAt(0).toUpperCase() + str1.slice(1); 
+// add mukltipe times - Array(count + 1).join("test")
+
+
+const count_duplicate_characters = function(str) {
+    
+    var arr = {}
+
+    for (let i = 0; i < str.length; i++) {
+
+        if (Object.keys(arr).includes(str[i])) {
+            arr[str[i]] = arr[str[i]] + 1
+            continue
+        }
+        
+        arr[str[i]] = 1
+    }
+    return arr
+    
+}
+
+const reverse = function(string) {
+    return string.split(' ').map(function (item) {
+        return item.split('').reverse().join('');
+    }).join(' ');
+}
+
+
+const is_palindrome = function(str) {
+
+    var left = 0
+    var right = str.length - 1
+
+    while (right > left) {
+
+        if (str.charAt(left) != str.charAt(right)) {
+            return false
+        }
+        
+        left++
+        right--
+    }
+    
+    return true
+
+}
+OR 
+return str == str.split('').reverse().join('')
