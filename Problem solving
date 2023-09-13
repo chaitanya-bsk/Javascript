@@ -428,3 +428,19 @@ then().
 then().
 catch()
 finally will execute after promise resolved or rejected 
+
+type of //
+const geeks = {
+  name: "Shubham",
+  age: 21,
+  Intern: "Geeksoforgeeks",
+  Place: "Work from Home"
+};
+
+const geek = JSON.stringify(geeks);
+console.log(typeof(geek)) - string
+console.log(typeof(geeks)) - object
+
+console.log(typeof(geek))
+console.log((Object.keys(geeks)))
+console.log((Object.values(geeks)))
