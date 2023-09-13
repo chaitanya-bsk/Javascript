@@ -354,3 +354,77 @@ const is_palindrome = function(str) {
 }
 OR 
 return str == str.split('').reverse().join('')
+
+
+classes-
+class Pen {
+  constructor(name, color, price){
+      this.name = name;
+      this.color = color; 
+      this.price = price;
+  }
+  
+  showPrice(){
+      console.log(`Price of ${this.name} is ${this.price}`);
+  }
+
+  testPrice(){
+    console.log( this.showPrice());
+  }
+
+  greet = function () {
+    return ('Hello' + ' ' + this.name);
+}
+}
+
+const pen1 = new Pen("Marker", "Blue", "$3");
+const pen2 = new Pen("pencil", "red", "$5");
+pen1.showPrice();
+pen1.testPrice();
+pen2.showPrice();
+pen2.testPrice();
+console.log(pen2.greet());
+
+Getter / setter - 
+class Person {
+  constructor(name) {
+      this.name = name;
+  }
+
+  // getter
+  get personName() {
+      return this.name;
+  }
+
+  // setter
+  set personName(x) {
+      this.name = x;
+  }
+}
+
+let person1 = new Person('Jack');
+console.log(person1.name); // Jack
+
+// changing the value of name property
+person1.personName = 'Sarah';
+console.log(person1.name); // Sarah
+console.log(person1.name);
+
+Call back functions - 
+
+function testcallback (name, callfunction){
+  console.log(name +" " + "call below function" )
+  callfunction()
+}
+
+function newfunction () {
+  console.log("i am call back")
+}
+// passing function as an argument
+testcallback('hello', newfunction);
+
+promise
+then().
+then().
+catch()
+finally will execute after promise resolved or rejected 
