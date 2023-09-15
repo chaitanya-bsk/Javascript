@@ -444,3 +444,59 @@ console.log(typeof(geeks)) - object
 console.log(typeof(geek))
 console.log((Object.keys(geeks)))
 console.log((Object.values(geeks)))
+
+JSON.parse() - parse will convert json text into javascript object
+JSON.stringify - will convert javascript object into json text
+
+find index - 
+const fruits = ['apple', 'banana', 'cherry', 'orange'];
+const index = fruits.indexOf('cherry');
+
+last in first out - 
+var arr = [2,4,"5",6]
+arr.push(5);
+arr.pop();
+
+first in first out - 
+first_item= arr.shift() - removes first item and returns in array 
+arr.push(first_item)
+unshift() – adds one or more elements to the beginning of an array and returns the new length of the array
+
+concat -> arr.concat(arr1,arr2,arr3);
+remove duplicates - use set  let mergedArr = [...new Set(arr)]
+clone array - concat same array to empty object , just slice without parameters , loop and put a new array , map 
+
+#finding element in array 
+linear search - go with all the elements 
+binary search - make half and search 
+indexof() - 
+filter method - let ans = arr.filter(num => num ==element);
+if (ans.length){
+}
+
+swap - [a[i], a[j]] = [a[j], a[i]] 
+how to put static value - fill method, it fills / for loop and assign value / push method in that index 
+
+remove duplicates - 
+_.uniq()
+forEach -  
+a.forEach(element => {
+   if (!b.includes(element)){
+    b.push(element)
+   }
+
+find largest 3 elements in array = 
+sort and then slice 3 
+
+String -
+replce - String split() and join() str.split('Welcome').join('Hello');
+str.replaceAll
+
+unique value - 
+uniq.includes(str[i]) === false)
+str = str.split("") and str = [...str].join(""); 
+
+sort - 
+numbers.sort((a, b) => b - a);
+
+
