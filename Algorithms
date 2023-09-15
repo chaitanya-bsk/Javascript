@@ -1,0 +1,10 @@
+Searching Algorithms
+Linear search - indexOf(), includes(), find(), and findIndex().
+Binary Search - divide and conquer - 
+
+Sorting Algorithms - 
+Bubble Sort - looping and swapping - keep element to last 
+Selection Sort - keeping smallest values to first 
+Insertion Sort - dividing into two arrays (sorted/unsorted)- then comparing one element from one to side to putting in other side
+Merge sort - split into small 
+Quick Sort - pivot 
